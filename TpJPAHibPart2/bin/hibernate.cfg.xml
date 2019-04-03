@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+
+<!-- Configuration de la connexion -->
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/homwork_hib2?serverTimezone=UTC</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">root</property>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+<!-- Configuration des propriétés de hibernate -->
+<property name="hibernate.hbm2ddl.auto">create</property>
+<!-- Les valeurs possibles : create, update, validate, create-drop -->
+
+<!-- Déclarer le dialect correspondant à MySQL -->
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+<!-- Afficher les requetes SQL générées (true) -->
+<property name="hibernate.show_sql">true</property>
+
+<!-- Déclaration des fichiers de mapping -->
+<!-- <mapping class="ManyToManyEcole.Etudiant"/> -->
+<!-- <mapping class="ManyToManyEcole.Matiere"/> -->
+
+<!-- <mapping class="entitiesOnetoOne.Employer"/> -->
+<!-- <mapping class="entitiesOnetoOne.Adresse"/> -->
+
+<mapping class="entities.Player"/>
+<mapping class="entities.Footballer"/>
+<mapping class="entities.Cricketer"/>
+<mapping class="entities.Bowler"/>
+
+
+
+</session-factory>
+</hibernate-configuration> 
